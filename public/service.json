@@ -1,0 +1,83 @@
+
+    {
+      "image_url": "https://i.ibb.co/Nmnj01s/pexels-cottonbro-4100661.jpg",
+      "service_name": "Individual Counseling Sessions",
+      "price": "$100 per session",
+      "service_area": "Psychological counseling",
+      "description": "Tailored one-on-one sessions where individuals can explore their thoughts, emotions, and behaviors in a safe and confidential environment.",
+      "providerImg":"https://i.ibb.co/5Mwj2yL/dummy1.jpg",
+      "displayName":"admin",
+      "email":"admin@gmail.com"
+    },
+    
+    {
+      "image_url": "https://i.ibb.co/YXFbqz6/pexels-cottonbro-4098225.jpg",
+      "service_name": "Couples Therapy",
+      "price": "$120 per session",
+      "service_area": "Relationship counseling",
+      "description": "Guidance and support for couples experiencing relationship difficulties, communication issues, or seeking pre-marital counseling.",
+      "providerImg":"https://i.ibb.co/5Mwj2yL/dummy1.jpg",
+      "displayName":"admin",
+      "email":"admin@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/99C43Mf/pexels-shkrabaanthony-7579306.jpg",
+      "service_name": "Family Counseling",
+      "price": "$150 per session",
+      "service_area": "Family therapy",
+      "description": "Assistance for families navigating challenges such as conflict resolution, parenting issues, or major life transitions.",
+      "providerImg":"https://i.ibb.co/5Mwj2yL/dummy1.jpg",
+      "displayName":"admin",
+      "email":"admin@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/h7Y8PQD/pexels-cottonbro-4100421.jpg",
+      "service_name": "Child and Adolescent Counseling",
+      "price": "$90 per session",
+      "service_area": "Child and adolescent psychology",
+      "description": "Specialized support for children and teenagers dealing with developmental issues, academic stress, peer relationships, or emotional concerns.",
+      "providerImg":"https://i.ibb.co/5Mwj2yL/dummy1.jpg",
+      "displayName":"admin",
+      "email":"admin@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/DCDzTkm/pexels-olly-3772618.jpg",
+      "service_name": "Stress Management Workshops",
+      "price": "$50 per workshop",
+      "service_area": "Workshop",
+      "description": "Educational workshops focused on teaching practical techniques for managing stress, promoting resilience, and enhancing overall well-being.",
+      "providerImg":"https://i.ibb.co/w7ysvND/download.png",
+      "displayName":"abc",
+      "email":"abc@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/t2zhpkd/pexels-alex-green-5699455.jpg",
+      "service_name": "Anxiety and Depression Support",
+      "price": "$110 per session",
+      "service_area": "Mental health counseling",
+      "description": "Specialized services for individuals struggling with anxiety disorders, depression, or other mood-related challenges, including assessment, therapy, and ongoing support.",
+      "providerImg":"https://i.ibb.co/w7ysvND/download.png",
+      "displayName":"abc",
+      "email":"abc@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/vHg8WqX/pexels-polina-zimmerman-3958419.jpg",
+      "service_name": "Trauma Counseling",
+      "price": "$130 per session",
+      "service_area": "Trauma therapy",
+      "description": "Support for individuals who have experienced trauma, including therapy aimed at processing traumatic experiences, managing symptoms, and promoting healing.",
+      "providerImg":"https://i.ibb.co/w7ysvND/download.png",
+      "displayName":"abc",
+      "email":"abc@gmail.com"
+    },
+    {
+      "image_url": "https://i.ibb.co/FVjvtNq/pexels-cottonbro-8088489.jpg",
+      "service_name": "Substance Abuse Counseling",
+      "price": "$140 per session",
+      "service_area": "Addiction counseling",
+      "description": "Assistance for individuals dealing with substance use disorders, including assessment, therapy, and referrals to support groups or rehabilitation programs.",
+      "providerImg":"https://i.ibb.co/w7ysvND/download.png",
+      "displayName":"abc",
+      "email":"abc@gmail.com"
+    }
+  
