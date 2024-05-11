@@ -18,6 +18,8 @@ import AddService from './components/Services/Add Service/AddService';
 import ManageService from './components/Services/Manage Service/ManageService';
 import BookedServices from './components/Services/Booked Services/BookedServices';
 import ServiceToDo from './components/Services/Service To Do/ServiceToDo';
+import AllServices from './components/Services/All Services/AllServices';
+import SingleServiceDetails from './components/HomePage/PopularServices/SingleServiceDetails';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,20 @@ const router = createBrowserRouter([
         element:<PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>
 
       },
+      {
+        path:'/allServices',
+        element:<AllServices></AllServices>
+      },
+      {
+        path: '/singleServiceDetails/:id',
+        element: <SingleServiceDetails></SingleServiceDetails>,
+        // loader: ({ params }) => {
+        //   const { id } = params;
+        //   return fetch(`http://localhost:5000/serviceInfo/${id}`).then(response => response.json());
+        // }
+        loader:({params})=> fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+      },
+      
       
       {
         path: '*',
