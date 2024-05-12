@@ -21,6 +21,7 @@ import ServiceToDo from './components/Services/Service To Do/ServiceToDo';
 import AllServices from './components/Services/All Services/AllServices';
 import SingleServiceDetails from './components/HomePage/PopularServices/SingleServiceDetails';
 import Book from './components/Services/Booked Services/Book';
+import Update from './components/Services/Manage Service/Update';
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,11 @@ const router = createBrowserRouter([
       {
         path:"/book/:id",
         element:<Book></Book>,
+        loader:({params})=>fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+      },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
         loader:({params})=>fetch(`http://localhost:5000/serviceInfo/${params.id}`)
       },
       

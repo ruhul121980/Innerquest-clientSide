@@ -25,9 +25,11 @@ function ManageService() {
     }, []); 
 
     return (
-        <div>
+        <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-2/3 mx-auto'>
             {
-                services.map(data=> <CardManageService key={data._id} data={data}></CardManageService>)
+                
+                    services.map(data=> <CardManageService key={data._id} data={data}></CardManageService>)
+                
             }
         </div>
 

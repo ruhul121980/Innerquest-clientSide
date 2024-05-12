@@ -58,7 +58,7 @@ export default function AddService() {
         </div>
         <div className="mb-4">
           <label htmlFor="price" className="block text-gray-700 font-semibold mb-2">Price</label>
-          <input type="number" id="price" name="price" placeholder="Enter Price"
+          <input type="text" id="price" name="price" placeholder="Enter Price"
             className="w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500" />
         </div>
         <div className="mb-4">
