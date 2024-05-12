@@ -20,6 +20,7 @@ import BookedServices from './components/Services/Booked Services/BookedServices
 import ServiceToDo from './components/Services/Service To Do/ServiceToDo';
 import AllServices from './components/Services/All Services/AllServices';
 import SingleServiceDetails from './components/HomePage/PopularServices/SingleServiceDetails';
+import Book from './components/Services/Booked Services/Book';
 
 const router = createBrowserRouter([
   {
@@ -45,9 +46,11 @@ const router = createBrowserRouter([
       },
       
       {
-        path:'/manage-service',
-        element:<PrivateRoute><ManageService></ManageService></PrivateRoute>
-      },
+        path: '/manage-service/:email',
+        element: <PrivateRoute><ManageService/></PrivateRoute>,
+       
+    },
+    
       {
         path:'/booked-services',
         element:<PrivateRoute><BookedServices></BookedServices></PrivateRoute>
@@ -69,6 +72,11 @@ const router = createBrowserRouter([
         //   return fetch(`http://localhost:5000/serviceInfo/${id}`).then(response => response.json());
         // }
         loader:({params})=> fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+      },
+      {
+        path:"/book/:id",
+        element:<Book></Book>,
+        loader:({params})=>fetch(`http://localhost:5000/serviceInfo/${params.id}`)
       },
       
       

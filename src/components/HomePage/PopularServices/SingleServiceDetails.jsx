@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export default function SingleServiceDetails() {
   const allData = useLoaderData();
@@ -34,15 +34,14 @@ export default function SingleServiceDetails() {
             {displayName}
           </h2>
           <h2 className="card-title">
-            <span className="font-bold">Area of Service:</span>{" "}
-            {service_area}
+            <span className="font-bold">Area of Service:</span> {service_area}
           </h2>
         </div>
       </div>
 
       {/* start single service section */}
-      <h2 className="text-purple-800 text-center text-4xl my-4">
-        Service Provider Information
+      <h2 className="text-purple-800 text-center text-4xl my-6">
+        Service Information
       </h2>
       <div className="card w-2/3 mx-auto glass">
         <figure>
@@ -55,12 +54,13 @@ export default function SingleServiceDetails() {
           <p>Service Area: {service_area}</p>
           <p className="text-bold"> Provided By:</p>
           <div className="provider-info">
-            <img
-              src={providerImg}
-              alt={displayName}
-              className="provider-img"
-            />
-            <span className="provider-name">{displayName}</span>
+            <img src={providerImg} alt={displayName} className="provider-img rounded-full mb-5" />
+            <span className="provider-name"><span className="font-bold my-5 mt-5">Name: </span>{displayName}</span>
+
+            <div className="w-full"> 
+            <Link to={`/book/${_id}`}><button className="btn btn-outline btn-primary w-full mt-5">Book Now</button></Link>
+            </div>
+
           </div>
         </div>
       </div>

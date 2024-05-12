@@ -5,7 +5,8 @@ import { AuthContext } from "../../../providers/AuthProvider";
 export default function Navbar() {
   const { user, logOut } = useContext(AuthContext);
   const [isHovered, setIsHovered] = useState(false);
-
+  // const email=user.email;
+  
   const handleLogout = () => {
     logOut()
       .then(() => console.log("logged out"))
@@ -38,7 +39,7 @@ export default function Navbar() {
                   <Link to="/add-service">Add Service</Link>
                 </li>
                 <li>
-                  <Link to="/manage-service">Manage Service</Link>
+                  <Link to={`/manage-service/${user.email}`}>Manage Service</Link>
                 </li>
                 <li>
                   <Link to="/booked-services">Booked Services</Link>
