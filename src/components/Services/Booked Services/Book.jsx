@@ -1,6 +1,9 @@
+
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Book() {
     const { user } = useContext(AuthContext);
@@ -19,6 +22,7 @@ export default function Book() {
       const current_user_name=user.displayName;
       const currentUserEmail=user.email;
       const serviceStatus="pending";
+      const navigate = useNavigate();
 
       const handleSUbmit=(e)=>{
         e.preventDefault();
@@ -42,6 +46,8 @@ export default function Book() {
     .then(data=>{
         console.log(data)
     })
+    navigate('/');
+
 
       }
 
