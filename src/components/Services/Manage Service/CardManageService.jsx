@@ -17,7 +17,7 @@ export default function CardManageService({ data }) {
             cancelButtonText: 'No, cancel!',
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/serviceInfo/${_id}`, { 
+                fetch(`https://counselling-eight.vercel.app/serviceInfo/${_id}`, { 
                     method: 'DELETE'
                 })
                 .then(response => response.json())

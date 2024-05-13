@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><BookedServices></BookedServices></PrivateRoute>
       },
       {
-        path:'/service-to-do',
+        path:'/service-to-do/:providerEmail',
         element:<PrivateRoute><ServiceToDo></ServiceToDo></PrivateRoute>
 
       },
@@ -70,19 +70,19 @@ const router = createBrowserRouter([
         element: <SingleServiceDetails></SingleServiceDetails>,
         // loader: ({ params }) => {
         //   const { id } = params;
-        //   return fetch(`http://localhost:5000/serviceInfo/${id}`).then(response => response.json());
+        //   return fetch(`https://counselling-eight.vercel.app/serviceInfo/${id}`).then(response => response.json());
         // }
-        loader:({params})=> fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+        loader:({params})=> fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
       },
       {
         path:"/book/:id",
         element:<Book></Book>,
-        loader:({params})=>fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+        loader:({params})=>fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
       },
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/serviceInfo/${params.id}`)
+        loader:({params})=>fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
       },
       
       

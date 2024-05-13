@@ -31,9 +31,9 @@ export default function Book() {
     const special_instruction=form.special_instruction.value;
 
     const addBookingInfo={_id,image_url,service_name,price,service_area,description,displayName,email,providerImg,current_user_name,currentUserEmail,service_date,special_instruction,serviceStatus};
-    console.log(addBookingInfo)
+    // console.log(addBookingInfo)
 
-    fetch('http://localhost:5000/booking',{
+    fetch('https://counselling-eight.vercel.app/booking',{
         method:'POST',
         headers:{
             'content-type':'application/json'

@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 export default function Update() {
     const data=useLoaderData();
-    console.log("from update",data)
+    // console.log("from update",data)
     const { _id, image_url, service_name, price, service_area, description, displayName, providerImg } = data;
 
     const handleSubmit=(e)=>{
@@ -17,7 +17,7 @@ export default function Update() {
 
         const formData={image_url,service_name,price,service_area,description}
         
-        fetch(`http://localhost:5000/serviceInfo/${_id}`, {
+        fetch(`https://counselling-eight.vercel.app/serviceInfo/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +36,7 @@ export default function Update() {
                         //     icon: 'success',
                         //     confirmButtonText: 'Cool'
                         // });
-                        // navigate('/myArt');
+                        // navigate('/');
 
                 }
             });

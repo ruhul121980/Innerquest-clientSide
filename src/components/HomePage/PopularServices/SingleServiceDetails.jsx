@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 export default function SingleServiceDetails() {
   const allData = useLoaderData();
-  console.log("all data", allData);
+  // console.log("all data", allData);
   const {
     _id,
     image_url,

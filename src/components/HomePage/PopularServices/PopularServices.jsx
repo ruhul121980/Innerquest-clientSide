@@ -8,7 +8,7 @@ function PopularServices() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:5000/serviceInfo'); 
+                const response = await fetch('https://counselling-eight.vercel.app/serviceInfo'); 
                 if (!response.ok) {
                     throw new Error('Failed to fetch services');
                 }

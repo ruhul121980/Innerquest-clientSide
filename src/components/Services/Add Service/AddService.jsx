@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 export default function AddService() {
   const { user, logOut } = useContext(AuthContext);
-  console.log("tset",user)
+  // console.log("tset",user)
   const displayName=user.displayName;
   const email=user.email;
   const providerImg=user.photoURL;
@@ -20,9 +20,9 @@ export default function AddService() {
     const description=form.description.value;
     
     const addServiceInfo={image_url,service_name,price,service_area,description,displayName,email,providerImg};
-    console.log(addServiceInfo)
+    // console.log(addServiceInfo)
 
-    fetch('http://localhost:5000/serviceInfo',{
+    fetch('https://counselling-eight.vercel.app/serviceInfo',{
       method:'POST',
       headers:{
         'content-type':'application/json'
@@ -31,7 +31,7 @@ export default function AddService() {
     })
       .then(res=>res.json())
       .then(data=>{
-        console.log(data);
+        // console.log(data);
         if(data.insertedId){
           alert("added successfully");
           // form.reset();
