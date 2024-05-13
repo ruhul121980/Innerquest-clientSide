@@ -24,7 +24,7 @@ export default function Navbar() {
       </li>
 
       <li>
-        <NavLink to="/services" activeClassName="font-bold">
+        <NavLink to="/allServices" activeClassName="font-bold">
           Services
         </NavLink>
       </li>
