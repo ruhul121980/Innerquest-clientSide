@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     },
     
       {
-        path:'/booked-services',
+        path:'/booked-services/:email',
         element:<PrivateRoute><BookedServices></BookedServices></PrivateRoute>
       },
       {

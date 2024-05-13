@@ -42,7 +42,7 @@ export default function Navbar() {
                   <Link to={`/manage-service/${user.email}`}>Manage Service</Link>
                 </li>
                 <li>
-                  <Link to="/booked-services">Booked Services</Link>
+                  <Link to={`/booked-services/${user.email}`}>Booked Services</Link>
                 </li>
                 <li>
                   <Link to="/service-to-do">Service To Do</Link>
