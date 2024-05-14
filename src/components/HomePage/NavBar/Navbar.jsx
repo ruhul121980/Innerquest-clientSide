@@ -84,6 +84,7 @@ export default function Navbar() {
               {navLinks}
             </ul>
           </div>
+          <Link to='/'><img className='h-20 w-20 rounded-full' src="https://i.ibb.co/pJv7kNr/Abstract-Human-Care-Foundation-Tree-Free-Logo.png" alt="" /></Link>
           <Link to="/" className="btn btn-ghost text-xl">
             InnerQuest Counseling Services
           </Link>
