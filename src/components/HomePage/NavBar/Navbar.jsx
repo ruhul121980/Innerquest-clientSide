@@ -28,6 +28,11 @@ export default function Navbar() {
           Services
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/check" activeClassName="font-bold">
+          check
+        </NavLink>
+      </li>
 
       {user && (
         <>

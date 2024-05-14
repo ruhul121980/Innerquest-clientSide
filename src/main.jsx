@@ -7,6 +7,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
 import Root from './components/Root';
 import Home from './components/HomePage/Home/Home';
 import Login from './components/Login';
@@ -22,6 +31,7 @@ import AllServices from './components/Services/All Services/AllServices';
 import SingleServiceDetails from './components/HomePage/PopularServices/SingleServiceDetails';
 import Book from './components/Services/Booked Services/Book';
 import Update from './components/Services/Manage Service/Update';
+import User2 from './components/Services/All Services/User2';
 
 const router = createBrowserRouter([
   {
@@ -84,6 +94,14 @@ const router = createBrowserRouter([
         element:<Update></Update>,
         loader:({params})=>fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
       },
+      {
+        path:'/user2',
+        element:<User2></User2>
+      },
+      {
+        path:'/check',
+        element:<User2></User2>
+      },
       
       
       {
@@ -93,11 +111,14 @@ const router = createBrowserRouter([
     ]
   },
 ]);
-
+const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <AuthProvider>
+    <QueryClientProvider client={queryClient}>
+    <AuthProvider>
      <RouterProvider router={router} /> 
      </AuthProvider>
+    </QueryClientProvider>
+    
   </React.StrictMode>
 );
