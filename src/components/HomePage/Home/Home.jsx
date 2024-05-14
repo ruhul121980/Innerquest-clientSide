@@ -1,7 +1,10 @@
 import Slider from "../Slider/Slider";
 import Footer from "../Footer/Footer";
 import PopularServices from "../PopularServices/PopularServices";
-import User2 from "../../Services/All Services/User2";
+import User2 from "../../Services/All Services/AllServices";
+import Banner from "../AboutUs/Banner";
+import CounselingImportance from "../CounselingImportance/CounselingImportance";
+import Frequently from "../Frequently/Frequently";
 
 export default function Home() {
   return (
@@ -10,7 +13,11 @@ export default function Home() {
       <Slider></Slider>
       <div className="w-11/12 mx-auto">
       <PopularServices></PopularServices>
+
       </div>
+      <Banner></Banner>
+      <CounselingImportance></CounselingImportance>
+      <Frequently></Frequently>
       
       <Footer></Footer>
     </div>

@@ -1,38 +1,51 @@
-import { useState, useEffect } from 'react';
-import CardPopularServices from '../../HomePage/PopularServices/CardPopularServices';
+import React, { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+import CardUser from './CardUser';
 
+// Debounce function to delay the execution of a function
+const debounce = (fn, delay) => {
+  let timerId;
+  return function (...args) {
+    if (timerId) {
+      clearTimeout(timerId);
+    }
+    timerId = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
+};
 
-function AllServices() {
-    const [services, setServices] = useState([]);
+export default function AllServices() {
+  const [searchText, setSearchText] = useState('');
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await fetch('https://counselling-eight.vercel.app/serviceInfo'); 
-                if (!response.ok) {
-                    throw new Error('Failed to fetch services');
-                }
-                const data = await response.json();
-                setServices(data);
-            } catch (error) {
-                console.error('Error fetching services:', error);
-            }
-        }
-        fetchData();
-        
-    }, []); 
+  // Debounce the search function to wait for 300ms after the user stops typing
+  const delayedSearch = debounce((text) => setSearchText(text), 300);
 
-    return (
-        <div>
-            <h2 className='text-3xl text-center font-bold text-purple-700 my-5'>All Services</h2>
-           <div className='grid grid-cols-1 gap-5  max-w-sm mx-auto'>
-           {services.map(service => (
-                <CardPopularServices key={service._id} service={service} />
-            ))}
-           </div>
-           
-        </div>
-    );
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['serviceInfo', searchText],
+    queryFn: () =>
+      axios.get(`http://localhost:5000/serviceInfo2?search=${searchText}`).then(res => res.data),
+  });
+
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error fetching data</div>;
+
+  return (
+    <div className='text-center '>
+      <div className='max-w-sm mx-auto my-5 mb-5 border border-solid border-blue-500 '>
+      <input
+        type="text"
+        placeholder="Search services..."
+        value={searchText}
+        onChange={(e) => delayedSearch(e.target.value)} 
+      />
+      </div>
+      <div className='max-w-sm mx-auto  grid grid-cols-1'>
+        {data.map(datam => (
+          <CardUser key={datam._id} datam={datam}></CardUser>
+        ))}
+      </div>
+    </div>
+  );
 }
-
-export default AllServices;

@@ -31,7 +31,7 @@ import AllServices from './components/Services/All Services/AllServices';
 import SingleServiceDetails from './components/HomePage/PopularServices/SingleServiceDetails';
 import Book from './components/Services/Booked Services/Book';
 import Update from './components/Services/Manage Service/Update';
-import User2 from './components/Services/All Services/User2';
+import User2 from './components/Services/All Services/AllServices';
 
 const router = createBrowserRouter([
   {
@@ -98,10 +98,7 @@ const router = createBrowserRouter([
         path:'/user2',
         element:<User2></User2>
       },
-      {
-        path:'/check',
-        element:<User2></User2>
-      },
+      
       
       
       {
