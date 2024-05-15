@@ -22,11 +22,9 @@ export default function SingleServiceDetails() {
         <title>Inner Quest | Service Details</title>
         
       </Helmet>
-      <h2 className="text-purple-800 text-center text-4xl my-4">
-        Single Service Details
-      </h2>
+      
 
-      <h2 className="text-purple-800 text-center text-4xl my-4">
+      <h2 className="text-purple-800 text-center text-4xl my-6">
         Service Provider Information
       </h2>
       <div className="card card-side  w-2/3 mx-auto my-5 bg-base-100 shadow-xl">
@@ -45,7 +43,7 @@ export default function SingleServiceDetails() {
       </div>
 
       {/* start single service section */}
-      <h2 className="text-purple-800 text-center text-4xl my-6">
+      <h2 className="text-purple-800 text-center text-4xl my-8">
         Service Information
       </h2>
       <div className="card w-2/3 mx-auto glass">
