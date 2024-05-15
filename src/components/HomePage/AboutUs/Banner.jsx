@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div className="hero  min-h-screen bg-base-200">
       <div className="hero-content flex flex-col lg:flex-row items-center lg:items-start">
         <img
           src="https://i.ibb.co/1RJ5m48/jason-goodman-w-Vh5gr-SMYa-Y-unsplash.jpg"

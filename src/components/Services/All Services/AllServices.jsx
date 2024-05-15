@@ -26,14 +26,14 @@ export default function AllServices() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ['serviceInfo', searchText],
     queryFn: () =>
-      axios.get(`http://localhost:5000/serviceInfo2?search=${searchText}`).then(res => res.data),
+      axios.get(`https://counselling-eight.vercel.app/serviceInfo2?search=${searchText}`).then(res => res.data),
   });
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching data</div>;
 
   return (
-    <div className='text-center '>
+    <div className=' '>
       <Helmet>
         <title>Inner Quest | All Service</title>
         

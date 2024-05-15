@@ -15,7 +15,7 @@ function ServiceToDo() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/providerBookedService/${user.email}`);
+        const response = await axios.get(`https://counselling-eight.vercel.app/providerBookedService/${user.email}`);
         setBookedServices(response.data);
         setLoading(false);
       } catch (error) {

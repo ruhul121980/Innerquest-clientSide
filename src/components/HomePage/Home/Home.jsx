@@ -1,5 +1,4 @@
 import Slider from "../Slider/Slider";
-import Footer from "../Footer/Footer";
 import PopularServices from "../PopularServices/PopularServices";
 import User2 from "../../Services/All Services/AllServices";
 import Banner from "../AboutUs/Banner";
@@ -16,7 +15,7 @@ export default function Home() {
       </Helmet>
       <h2 className="text-2xl"></h2>
       <Slider></Slider>
-      <div className="w-11/12 mx-auto">
+      <div className="">
       <PopularServices></PopularServices>
 
       </div>
@@ -24,7 +23,7 @@ export default function Home() {
       <CounselingImportance></CounselingImportance>
       <Frequently></Frequently>
       
-      <Footer></Footer>
+      
     </div>
   );
 }

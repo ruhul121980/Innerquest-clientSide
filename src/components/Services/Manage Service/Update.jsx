@@ -1,8 +1,10 @@
 import React from 'react'
-import { useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 export default function Update() {
     const data=useLoaderData();
+    const navigate=useNavigate();
     // console.log("from update",data)
     const { _id, image_url, service_name, price, service_area, description, displayName, providerImg } = data;
 
@@ -28,15 +30,15 @@ export default function Update() {
             .then(data => {
                 console.log(data);
                 if(data.modifiedCount>0){
-                    alert('success')
+                    
                      
-                        // Swal.fire({
-                        //     title: 'Success',
-                        //     text: 'Data Updated successfully',
-                        //     icon: 'success',
-                        //     confirmButtonText: 'Cool'
-                        // });
-                        // navigate('/');
+                        Swal.fire({
+                            title: 'Success',
+                            text: 'Data Updated successfully',
+                            icon: 'success',
+                            confirmButtonText: 'Cool'
+                        });
+                        navigate(`/manage-service/${_id}`);
 
                 }
             });

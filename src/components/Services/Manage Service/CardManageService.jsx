@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Update from './Update';
 import Swal from 'sweetalert2';
 
 export default function CardManageService({ data }) {
@@ -29,7 +28,6 @@ export default function CardManageService({ data }) {
                             icon: 'success',
                             confirmButtonText: 'Cool'
                         }).then(() => {
-                            
                             window.location.reload();
                         });
                     } else {
@@ -55,7 +53,7 @@ export default function CardManageService({ data }) {
     };
 
     return (
-        <div className="card w-96 glass">
+        <div className="card md:w-72 lg:w-96 glass">
             <figure>
                 <img className="max-h-64 w-full" src={image_url} alt={service_name} />
             </figure>
@@ -65,9 +63,9 @@ export default function CardManageService({ data }) {
                 <p><span className="font-bold">Price:</span> {price}</p>
                 <p><span className="font-bold">Service Area:</span> {service_area}</p>
 
-                <div className="flex gap-10 mt-6">
-                    <Link to={`/update/${_id}`}><button className="btn btn-outline w-12 md:w-24 lg:24">Edit</button></Link>
-                    <div><button onClick={() => handleDelete(_id)} className="btn btn-outline w-12 md:w-24 lg:24">Delete</button></div>
+                <div className="flex gap-4 md:gap-10 mt-6">
+                    <Link to={`/update/${_id}`}><button className="btn btn-outline w-16 md:w-24">Edit</button></Link>
+                    <div><button onClick={() => handleDelete(_id)} className="btn btn-outline w-16 md:w-24">Delete</button></div>
                 </div>
             </div>
         </div>

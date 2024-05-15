@@ -20,7 +20,7 @@ export default function CardServiceToDo({ data }) {
     const newStatus = e.target.value;
     console.log("now", newStatus);
 
-    fetch(`http://localhost:5000/providerBookedService2/${_id}`, {
+    fetch(`https://counselling-eight.vercel.app/providerBookedService2/${_id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ export default function CardServiceToDo({ data }) {
   };
 
   return (
-    <div className="card w-96 glass">
+    <div className="card w-72 lg:w-96 glass">
       <figure>
         <img className="w-full max-h-80" src={image_url} alt={service_name} />
       </figure>

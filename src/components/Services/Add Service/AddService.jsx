@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 export default function AddService() {
   const { user, logOut } = useContext(AuthContext);
   // console.log("tset",user)
@@ -34,8 +35,12 @@ export default function AddService() {
       .then(data=>{
         // console.log(data);
         if(data.insertedId){
-          alert("added successfully");
-          // form.reset();
+          Swal.fire({
+            icon: 'success',
+            title: 'Success...',
+            text: 'Added Successfully',
+          });
+          form.reset();
         }
       })
 

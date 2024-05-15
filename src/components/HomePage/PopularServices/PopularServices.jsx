@@ -24,8 +24,8 @@ function PopularServices() {
 
     return (
         <div>
-            <h2 className='text-3xl text-center font-bold text-purple-700 my-5'>Our Popular Services</h2>
-           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-11/12 mx-auto'>
+            <h2 className='text-3xl text-center font-bold text-purple-700 my-10'>Our Popular Services</h2>
+           <div className='w-2/3   grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5  mx-auto'>
            {services.slice(0,6).map(service => (
                 <CardPopularServices key={service._id} service={service} />
             ))}
