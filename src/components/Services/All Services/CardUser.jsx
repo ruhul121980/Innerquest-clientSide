@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { AuthContext } from './../../../providers/AuthProvider';
+import { useContext } from 'react';
 
 export default function CardUser({datam}) {
+  const { user } = useContext(AuthContext);
     const {_id, image_url, service_name, price, service_area, description, displayName, providerImg } = datam;
   return (
     <div className="card w-96 glass">
@@ -19,7 +22,10 @@ export default function CardUser({datam}) {
             <span className="provider-name">{displayName}</span>
         </div>
         <div className="card-actions justify-end">
-           <Link to={`/singleServiceDetails/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+        {
+                    user?<Link to={`/singleServiceDetails/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+                    :<Link to="/login"><button className="btn btn-primary">View Details</button></Link>
+                }
         </div>
     </div>
 </div>

@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { useContext } from "react";
+
 
 export default function CardPopularServices({ service }) {
   const {_id, image_url, service_name, price, service_area, description, displayName, providerImg } = service;
 
+  const { user } = useContext(AuthContext);
   return (
       <div className="card w-96 glass">
           <figure>
@@ -19,7 +23,12 @@ export default function CardPopularServices({ service }) {
                   <span className="provider-name">{displayName}</span>
               </div>
               <div className="card-actions justify-end">
-                 <Link to={`/singleServiceDetails/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+
+                {
+                    user?<Link to={`/singleServiceDetails/${_id}`}> <button className="btn btn-primary">View Details</button></Link>
+                    :<Link to="/login"><button className="btn btn-primary">View Details</button></Link>
+                }
+                 
               </div>
           </div>
       </div>
