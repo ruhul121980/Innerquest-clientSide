@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 
 import { AuthContext } from "../../../providers/AuthProvider";
 import CardManageService from './CardManageService';
+import { Helmet } from 'react-helmet-async';
 
 function ManageService() {
     const [services, setServices] = useState([]);
@@ -26,7 +27,12 @@ function ManageService() {
 
     return (
         <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-2/3 mx-auto'>
+          <Helmet>
+        <title>Inner Quest | Manage Service</title>
+        
+      </Helmet>
             {
+
                 
                     services.map(data=> <CardManageService key={data._id} data={data}></CardManageService>)
                 

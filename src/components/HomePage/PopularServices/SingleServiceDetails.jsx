@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 export default function SingleServiceDetails() {
@@ -17,6 +18,10 @@ export default function SingleServiceDetails() {
 
   return (
     <div>
+      <Helmet>
+        <title>Inner Quest | Service Details</title>
+        
+      </Helmet>
       <h2 className="text-purple-800 text-center text-4xl my-4">
         Single Service Details
       </h2>

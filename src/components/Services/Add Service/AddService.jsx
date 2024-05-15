@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 export default function AddService() {
   const { user, logOut } = useContext(AuthContext);
   // console.log("tset",user)
@@ -43,6 +44,10 @@ export default function AddService() {
 
   return (
     <div className="bg-slate-400 mx-auto p-8 rounded shadow-md max-w-md w-full">
+      <Helmet>
+        <title>Inner Quest | Add Service</title>
+        
+      </Helmet>
       <h2 className="text-xl font-bold mb-4">Add Service</h2>
 
       <form onSubmit={handleSubmit}>

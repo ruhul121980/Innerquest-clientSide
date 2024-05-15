@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import CardUser from './CardUser';
+import { Helmet } from 'react-helmet-async';
 
 // Debounce function to delay the execution of a function
 const debounce = (fn, delay) => {
@@ -33,6 +34,10 @@ export default function AllServices() {
 
   return (
     <div className='text-center '>
+      <Helmet>
+        <title>Inner Quest | All Service</title>
+        
+      </Helmet>
       <div className='max-w-sm mx-auto my-5 mb-5 border border-solid border-blue-500 '>
       <input
         type="text"

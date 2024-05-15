@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 import Swal from 'sweetalert2'; 
+import { Helmet } from 'react-helmet-async';
 
 export default function Login() {
     const { signInUser, signInWithGoogle, signInWithFacebook } = useContext(AuthContext);
@@ -39,18 +40,14 @@ export default function Login() {
         });
     };
 
-    const handleFacebookSignIn = () => { 
-      signInWithFacebook()
-        .then(result => {
-          console.log(result.user);
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    };
+   
 
     return (
       <div className="hero min-h-screen bg-base-200">
+        <Helmet>
+        <title>Inner Quest | Login</title>
+        
+      </Helmet>
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold">Login now!</h1>
@@ -83,7 +80,7 @@ export default function Login() {
                   <button className="btn btn-link">Register</button>
                 </Link>
                 <p><button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button></p>
-                <p><button onClick={handleFacebookSignIn} className="btn btn-ghost">Facebook</button></p> 
+                
               </p>
             </div>
           </div>

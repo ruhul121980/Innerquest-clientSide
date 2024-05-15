@@ -3,6 +3,7 @@ import  { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../../providers/AuthProvider';
 import CardServiceToDo from './CardServiceToDo';
+import { Helmet } from 'react-helmet-async';
 
 
 function ServiceToDo() {
@@ -36,6 +37,10 @@ function ServiceToDo() {
 
   return (
     <div>
+      <Helmet>
+        <title>Inner Quest | Service To Do</title>
+        
+      </Helmet>
       <h2 className='text-center text-3xl my-8'>Service To Do</h2>
       {console.log(bookedServices)}
       <div className='w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>

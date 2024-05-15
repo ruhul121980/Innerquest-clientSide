@@ -32,6 +32,7 @@ import SingleServiceDetails from './components/HomePage/PopularServices/SingleSe
 import Book from './components/Services/Booked Services/Book';
 import Update from './components/Services/Manage Service/Update';
 import User2 from './components/Services/All Services/AllServices';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -113,7 +114,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
     <AuthProvider>
-     <RouterProvider router={router} /> 
+      <HelmetProvider>
+      <RouterProvider router={router} /> 
+      </HelmetProvider>
+     
      </AuthProvider>
     </QueryClientProvider>
     
