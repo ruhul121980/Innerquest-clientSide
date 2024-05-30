@@ -37,6 +37,9 @@ export default function Navbar() {
         <NavLink to="/" activeClassName="font-bold">
           Home
         </NavLink>
+        <NavLink to="/userFeedback" activeClassName="font-bold">
+          User Feedback
+        </NavLink>
       </li>
 
       <li>
@@ -62,6 +65,11 @@ export default function Navbar() {
               <li>
                 <Link to={`/service-to-do/${user.email}`}>Service To Do</Link>
               </li>
+
+              <li>
+                <Link to='/feedback'>Add Feedback</Link>
+              </li>
+
             </ul>
           </details>
         </li>

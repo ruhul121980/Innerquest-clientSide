@@ -33,6 +33,8 @@ import Book from './components/Services/Booked Services/Book';
 import Update from './components/Services/Manage Service/Update';
 import User2 from './components/Services/All Services/AllServices';
 import { HelmetProvider } from 'react-helmet-async';
+import FeedBack from './components/FeedBack/FeedBack';
+import UserFeedback from './components/FeedBack/UserFeedback';
 
 const router = createBrowserRouter([
   {
@@ -86,6 +88,12 @@ const router = createBrowserRouter([
         loader:({params})=> fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
       },
       {
+
+        path:'/userFeedback',
+        element:<UserFeedback></UserFeedback>,
+        loader:()=>fetch('https://counselling-eight.vercel.app/userFeedback')
+      },
+      {
         path:"/book/:id",
         element:<Book></Book>,
         loader:({params})=>fetch(`https://counselling-eight.vercel.app/serviceInfo/${params.id}`)
@@ -99,7 +107,10 @@ const router = createBrowserRouter([
         path:'/user2',
         element:<User2></User2>
       },
-      
+      {
+        path:'/feedback',
+        element:<FeedBack></FeedBack>
+      },
       
       
       {
